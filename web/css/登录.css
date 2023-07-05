@@ -1,0 +1,78 @@
+body{
+    background-image: url(../img/背景.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position: 0px -50px;
+}
+
+#myForm{
+    background-color: #00000068;
+    border-radius: 13px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 80px;
+    width: 350px;
+    height: 400px;
+}
+
+#myForm h1{
+    padding-top: 60px;
+    color: #ffffff;
+}
+
+#myForm .input-box{
+    margin-top: 30px;
+}
+
+#myForm .input-box span{
+    color: white;
+}
+
+#myForm .input-box input{
+    border: none;
+    background: none;
+    border-bottom: #FFFFFF 2px solid;
+    padding: 5px 10px;
+    outline: none;
+    color: white;
+}
+
+#res{
+    line-height:30px;
+    margin-top: 30px;
+    width: 130px;
+    height: 30px;
+    border-radius:13px ;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    color: white;
+}
+
+#submit{
+    line-height:30px;
+    margin-top: 30px;
+    width: 130px;
+    height: 30px;
+    border-radius:13px ;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    color: white;
+}
+
+#myForm .input-box i{
+    color: #FFFFFF;
+}
+
+#myForm .role-box{
+    margin-top: 10px;
+}
+
+#myForm .role-box b{
+    color: white;
+}
+
+#myForm .role-box span{
+    color: white;
+}

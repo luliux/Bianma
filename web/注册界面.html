@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function validateForm()
+        {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let password2 = document.getElementById("password2").value;
+            let age = document.getElementById("age").value;
+            let email = document.getElementById("email").value;
+
+            if(password != password2){
+                alert("the two passwords are inconsistent!");
+                document.getElementById("password").value = "";
+                document.getElementById("password2").value = "";
+                document.getElementById("password").focus();
+                return;
+            }
+
+            if(!isNumber(age)){
+                alert("the age must be filled numbers");
+                return;
+            }
+
+            if(!isEmail(email)){
+                alert("the email format is not correct");
+                return;
+            }
+            document.getElementById("myForm").submit();
+        }
+
+        function isNumber(val) {
+            var regPos = /^[0-9]+.?[0-9]*/;//判断是否为数字
+            return regPos.test(val);
+        }
+
+        function isEmail(val) {
+            var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+            return reg.test(val);
+        }
+
+    </script>
+    <title>系统注册界面</title>
+    <link rel="stylesheet" type="text/css"href="./css/注册.css"/>
+    <link rel="stylesheet" type="text/css"href="./css/iconfont.css"/>
+</head>
+<body>
+<dive class="login-box">
+    <form id="myForm" action="RegistController" method="post">
+        <h1>Register</h1>
+        <div class="input-box">
+            <span>用户名：</span>
+            <input type="text" autofocus="autofocus" id="username" name="username" placeholder="UserName" required="required" />
+        </div>
+
+        <div class="input-box">
+            <span>密码：</span>
+        <input type="password" autofocus="autofocus" id="password" name="password" placeholder="UserPassword" required="required"/>
+        </div>
+
+        <div class="input-box">
+            <span>确认密码：</span>
+            <input type="password" autofocus="autofocus" id="password2"  placeholder="SamePassword" required="required" />
+        </div>
+
+        <div class="input-box">
+            <span>Age:</span>
+            <input type="text" id="age" name="age" placeholder="Age" required="required"/>
+        </div>
+
+        <div class="role-box">
+            <b>Gender:</b>
+            <input type="radio" name="gender" value="男" checked="checked"><span>男</span>
+            <input type="radio" name="gender" value="女" ><span>女</span>
+        </div>
+
+        <div class="input-box">
+            <span>Emile:</span>
+            <input type="text" id="email" name="email" placeholder="Email"/>
+        </div>
+        <button onclick="validateForm()">Finish</button>
+    </form>
+</dive>
+</body>
+</html>
